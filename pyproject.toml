@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medical-image-ml-playground"
+version = "0.1.0"
+description = "Medical image preprocessing and Databricks inference"
+requires-python = ">=3.10"
+dependencies = [
+    "databricks-sdk",
+    "numpy",
+    "pydicom",
+    "python-dotenv",
+    "torch",
+]
+
+[project.scripts]
+medical-image-ml-playground = "medical_image_ml_playground.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
